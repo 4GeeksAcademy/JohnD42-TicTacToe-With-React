@@ -10,3 +10,53 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+body {
+    color: white;
+    background-color: rgb(109, 92, 92)
+}
+
+.col-4 {
+    height: 80px;
+    width: 80px;
+    font-size: 3rem;
+    color: rgb(170, 145, 145); 
+}
+
+.gridRow {
+    width: 240px;
+}
+
+form {
+    background-color: rgb(59, 44, 44);
+    height: 200px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chooseWpnBtn {
+    height: 100%;
+    font-size: 4rem;
+    width: 100px;
+}
+
+.chooseWpnBtn:hover {
+    background-color: rgb(112, 85, 85)
+}
+
+.xBtn {
+    color: lightgoldenrodyellow
+}
+
+.oBtn {
+    color: skyblue
+}
+
+.col-3 {
+    align-items: center;
+}
+
+input {
+    width: 80%
+}
