@@ -67,7 +67,7 @@ const Home = () => {
 					setGameOver(true);
 					setGameWinner(weapon);
 				}
-				if(moves[1][1] === weapon && moves[2][1] === weapon) {
+				if(moves[1][1] === weapon && moves[2][0] === weapon) {
 					setGameOver(true);
 					setGameWinner(weapon);
 				}
