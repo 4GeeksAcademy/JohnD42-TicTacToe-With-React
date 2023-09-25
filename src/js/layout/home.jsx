@@ -18,7 +18,7 @@ const Home = () => {
 		console.log('starting over');
 		setMoves([['','',''],['','',''],['','','']])
 		setGameOver(false)
-		setTurn('X')
+		setGameStarted(false)
 	}
 
 	const turnChanger = () => {
@@ -26,11 +26,9 @@ const Home = () => {
 	}
 
 	const clickHandler = (e) => {
-		console.log(...moves[0],...moves[1],...moves[2])
 		if(e.target.innerHTML === '' && gameOver !== true) {
 			const weapon = turn
 			const sqrID = e.target.id;
-			 
 			if(sqrID === 'sqr1') {
 				setMoves([[weapon, moves[0][1],moves[0][2]],moves[1],moves[2]])
 				if(moves[0][1] === weapon && moves[0][2] === weapon) {
@@ -45,6 +43,18 @@ const Home = () => {
 					setGameOver(true);
 					setGameWinner(weapon);
 				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
+				}
 			}
 			if(sqrID === 'sqr2') {
 				setMoves([[moves[0][0],weapon, moves[0][2]],moves[1],moves[2]])
@@ -55,6 +65,18 @@ const Home = () => {
 				if(moves[1][1] === weapon && moves[2][1] === weapon) {
 					setGameOver(true);
 					setGameWinner(weapon);
+				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
 				}
 			}
 			if(sqrID === 'sqr3') {
@@ -71,6 +93,18 @@ const Home = () => {
 					setGameOver(true);
 					setGameWinner(weapon);
 				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
+				}
 			}
 			if(sqrID === 'sqr4') {
 				setMoves([moves[0],[weapon, moves[1][1],moves[1][2]],moves[2]])
@@ -81,6 +115,18 @@ const Home = () => {
 				if(moves[1][1] === weapon && moves[1][2] === weapon) {
 					setGameOver(true);
 					setGameWinner(weapon);
+				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
 				}
 			}
 			if(sqrID === 'sqr5') {
@@ -101,6 +147,18 @@ const Home = () => {
 					setGameOver(true);
 					setGameWinner(weapon);
 				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
+				}
 			}
 			if(sqrID === 'sqr6') {
 				setMoves([moves[0],[moves[1][0],moves[1][1], weapon],moves[2]])
@@ -111,6 +169,18 @@ const Home = () => {
 				if(moves[0][2] === weapon && moves[2][2] === weapon) {
 					setGameOver(true);
 					setGameWinner(weapon);
+				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
 				}
 			}
 			if(sqrID === 'sqr7') {
@@ -127,6 +197,18 @@ const Home = () => {
 					setGameOver(true);
 					setGameWinner(weapon);
 				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
+				}
 			}
 			if(sqrID === 'sqr8') {
 				setMoves([moves[0], moves[1], [moves[2][0], weapon, moves[2][2]],])
@@ -137,6 +219,18 @@ const Home = () => {
 				if(moves[1][1] === weapon && moves[0][1] === weapon) {
 					setGameOver(true);
 					setGameWinner(weapon);
+				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
 				}
 			}
 			if(sqrID === 'sqr9') {
@@ -152,6 +246,18 @@ const Home = () => {
 				if(moves[0][0] === weapon && moves[1][1] === weapon) {
 					setGameOver(true);
 					setGameWinner(weapon);
+				}
+				let count = 0
+				for(let char of [...moves[0],...moves[1],...moves[2]].join('')) {
+					if(char === 'X' || char === 'O') {
+						count += 1
+					}
+					console.log(count)
+					if(count === 8) {
+						setGameWinner('No one')
+						setGameOver(true);
+						
+					}
 				}
 			}
 			if(gameOver === false) {
@@ -169,7 +275,7 @@ const Home = () => {
 			<div className="row mx-auto g-0">
 				<div className="col-3 mx-auto">
 					<h3><strong>TicTacToe in React.js</strong></h3>
-					<h3>
+					<h3 style={gameOver === false ? {} : gameWinner === 'X' || gameWinner === 'O' ? {color: 'green'} : {color: 'red'}}>
 						{gameOver === true ? `${gameWinner} wins!` : gameStarted === true ? `It is ${turn}'s turn!` : 'Pick A Weapon'}
 					</h3>
 					<StartOverBtn startOver={startOver}/>

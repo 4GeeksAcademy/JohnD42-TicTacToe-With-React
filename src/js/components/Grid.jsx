@@ -14,7 +14,6 @@ const Grid = (props) => {
                             return (
                                 <div className="col-4 border text-center mx-auto" onClick={clickHandler} id={`sqr${rowIdx*3 + sqrIdx+1}`}>
                                     {val}
-                                    {console.log(sqrIdx)}
                                 </div>
                         )
                         })}
